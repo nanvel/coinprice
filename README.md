@@ -1,5 +1,7 @@
 # Duck typing, Abstract Basic Classes, and Typing Protocols
 
+Made for [ThaiPy#95](https://www.meetup.com/thaipy-bangkok-python-meetup/events/293650816/) lightning talk.
+
 [Typing Protocols](https://peps.python.org/pep-0544/): Structural subtyping (static duck typing)
 
 1. Duck Typing (the current main.py content)
