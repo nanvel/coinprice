@@ -1,15 +1,25 @@
-# Duck typing, Abstract Basic Classes, and Typing Protocols
+# Duck typing, Abstract Base Classes, and Typing Protocols
 
 Made for [ThaiPy#95](https://www.meetup.com/thaipy-bangkok-python-meetup/events/293650816/) lightning talk.
 
-[Typing Protocols](https://peps.python.org/pep-0544/): Structural subtyping (static duck typing)
+[PEP 544](https://peps.python.org/pep-0544/) - Protocols: Structural subtyping (static duck typing)
 
-1. Duck Typing (the current main.py content)
-2. Use BaseExchange class
+Since Python 3.8.
+
+1. Static vs at runtime
+2. Duck Typing (the current main.py content)
+3. Use BaseExchange class
    1. Without raise NotImplementedError
    2. With raise NotImplementedError
-3. Use ABC
-4. Use ExchangeProtocol
+4. Use ABC
+5. Use ExchangeProtocol
+
+## Structural subtyping
+
+Structural subtyping: an object that has certain properties is treated
+independently of its actual runtime class.
+
+Nominal subtyping: based on inheritance.
 
 ## Make it broken
 
@@ -48,7 +58,7 @@ class BinanceUSDFuturesExchange(BaseExchange):
 ```python
 class BaseExchange:
     def get_symbol_price(self, symbol: str) -> Decimal:
-        raise NotImplementedError()
+        raise NotImplementedError
 ```
 
 ## ABC
